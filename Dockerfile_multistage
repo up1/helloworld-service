@@ -1,7 +1,7 @@
 FROM maven:3.6.1-jdk-8 AS build_process
 WORKDIR /work
 COPY . /work
-RUN mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 FROM openjdk:8u222-jre-stretch
 WORKDIR /deploy
