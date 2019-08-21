@@ -12,10 +12,10 @@ public class HelloControlller {
     @Autowired
     private MessageRepository messageRepository;
 
-    @GetMapping("/h1")
+    @GetMapping("/hi")
     public HelloResponse hi() {
         Optional<Message> optionalMessage = messageRepository.findById(1);
-        String message = optionalMessage.get().getMessage();
+        String message = optionalMessage.get().getData();
         return new HelloResponse(message);
     }
 
