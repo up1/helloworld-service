@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-public class HelloControlller {
+public class HelloController {
 
     @Autowired
     private MessageRepository messageRepository;

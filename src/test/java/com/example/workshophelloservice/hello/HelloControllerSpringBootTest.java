@@ -14,7 +14,7 @@ import static org.springframework.boot.test.context.SpringBootTest.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class HelloControlllerSpringBootTest {
+public class HelloControllerSpringBootTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
