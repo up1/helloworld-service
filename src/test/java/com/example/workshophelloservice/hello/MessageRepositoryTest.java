@@ -1,7 +1,9 @@
 package com.example.workshophelloservice.hello;
 
+import com.example.workshophelloservice.IntegrationTest;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -11,6 +13,7 @@ import java.util.Optional;
 
 import static org.junit.Assert.*;
 
+@Category(IntegrationTest.class)
 @RunWith(SpringRunner.class)
 @DataJpaTest
 public class MessageRepositoryTest {
