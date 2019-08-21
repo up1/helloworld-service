@@ -1,6 +1,14 @@
 # helloworld-service
 
-Step to run ?
+### Tasks
+* Create project with Spring Boot
+* Database woth PostgreSQL
+  * Create database
+  * Create table
+  * Initial data
+* Deploy project with Docker compose
+
+### Step to run ?
 ```
 $mvnw clean package -DskipTests
 $cd docker
