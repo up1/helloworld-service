@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  postgres:
+    build: postgresql
+    environment:
+      POSTGRES_PASSWORD: dbpass
+      POSTGRES_USER: dbuser
+  hello:
+    build:
+      context: ../
+      dockerfile: Dockerfile_multistage
+    links:
+      - postgres
+    ports:
+      - 8080:8080
