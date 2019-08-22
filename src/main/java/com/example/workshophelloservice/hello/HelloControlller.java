@@ -10,13 +10,11 @@ import java.util.Optional;
 public class HelloControlller {
 
     @Autowired
-    private MessageRepository messageRepository;
+    private HelloService helloService;
 
     @GetMapping("/hi")
     public HelloResponse hi() {
-        Optional<Message> optionalMessage = messageRepository.findById(1);
-        String message = optionalMessage.get().getData();
-        return new HelloResponse(message);
+        return helloService.process();
     }
 
 }

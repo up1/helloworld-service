@@ -28,16 +28,15 @@ public class HelloControlllerWebMvcTest {
     private MockMvc mvc;
 
     @MockBean
-    private MessageRepository messageRepository;
+    private HelloService helloService;
 
     @Test
     public void hi() throws Exception {
-        Message message = new Message();
-        message.setId(1);
-        message.setData("Hello World 2");
+        HelloResponse helloResponse = new HelloResponse();
+        helloResponse.setMessage("Hello World 2");
 
-        given(this.messageRepository.findById(1))
-                .willReturn(Optional.of(message));
+        given(this.helloService.process())
+                .willReturn(helloResponse);
 
         MvcResult result = this.mvc.perform(get("/hi").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
