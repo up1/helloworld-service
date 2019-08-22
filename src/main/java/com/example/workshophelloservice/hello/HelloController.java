@@ -25,7 +25,17 @@ public class HelloController {
 
         log.info("Say hi with message : {}" , message);
 
+        call2();
+
         return new HelloResponse(message);
+    }
+
+    private void call1() {
+        call2();
+    }
+
+    private void call2() {
+
     }
 
 }
