@@ -5,9 +5,16 @@ services:
     environment:
       POSTGRES_PASSWORD: dbpass
       POSTGRES_USER: dbuser
+    networks:
+      - esnet
   hello:
     build: ../
     links:
       - postgres
     ports:
       - 8080:8080
+    networks:
+      - esnet
+
+networks:
+  esnet:
